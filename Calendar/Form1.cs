@@ -97,11 +97,6 @@ namespace Calendar
             int days = DateTime.DaysInMonth(year, month);
             int daysWeek = Convert.ToInt32(startofthemonth.DayOfWeek.ToString("d"));
 
-            for (int i = 0; i < length; i++)
-            {
-
-            }
-
             for (int i = 1; i < daysWeek; i++)
             {
                 UserControlBlank ucblank = new UserControlBlank();
