@@ -23,7 +23,7 @@ namespace Calendar
             BasePath = "https://kalendarz-6c7c5-default-rtdb.europe-west1.firebasedatabase.app/"
         };
 
-
+        IFirebaseClient Client;
 
         String connString = "server=localhost; user id=root; database=db_kalendarz;sslmode=none";
         
@@ -35,6 +35,12 @@ namespace Calendar
 
         private void FormularzZdarzen_Load(object sender, EventArgs e)
         {
+            Client = new FireSharp.FirebaseClient(config);
+            if(Client != null) // test bazy 
+            {
+                MessageBox.Show("Nawiązano połączenie z bazą danych");
+            }
+
             txDate.Text = UserControlDays.static_day + "/" + Form1.static_month + "/" + Form1.static_year;
         }
 
