@@ -9,10 +9,22 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using MySql.Data.MySqlClient;
 
+using FireSharp.Config;
+using FireSharp.Interfaces;
+using FireSharp.Response;
+
 namespace Calendar
 {
     public partial class FormularzZdarzen : Form
     {
+        IFirebaseConfig config = new FirebaseConfig
+        {
+            AuthSecret = "4Z4BDQR2iD0Z2NU4w4NH1byRsdgRjci6ZAfCsbtQ",
+            BasePath = "https://kalendarz-6c7c5-default-rtdb.europe-west1.firebasedatabase.app/"
+        };
+
+
+
         String connString = "server=localhost; user id=root; database=db_kalendarz;sslmode=none";
         
 
