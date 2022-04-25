@@ -24,22 +24,12 @@ namespace Calendar
         public static int static_month, static_year;
 
 
-        public Form1()
+        public Form1() // główne wywołanie okna aplikacji
         {
             InitializeComponent();
         }
 
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label4_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Form1_Load(object sender, EventArgs e)
+        private void Form1_Load(object sender, EventArgs e) // main
         {
             displayDays();
         }
@@ -75,11 +65,6 @@ namespace Calendar
                 daycontainer.Controls.Add(ucdays);
             }
             
-        }
-
-        private void label7_Click(object sender, EventArgs e)
-        {
-
         }
 
         private void btnprev_Click(object sender, EventArgs e)

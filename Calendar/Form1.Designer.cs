@@ -78,7 +78,6 @@ namespace Calendar
             this.label1.Size = new System.Drawing.Size(95, 19);
             this.label1.TabIndex = 3;
             this.label1.Text = "Poniedziałek";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // label2
             // 
@@ -109,7 +108,6 @@ namespace Calendar
             this.label4.Size = new System.Drawing.Size(49, 19);
             this.label4.TabIndex = 5;
             this.label4.Text = "Środa";
-            this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
             // label5
             // 
@@ -150,7 +148,6 @@ namespace Calendar
             this.LBdate.TabIndex = 10;
             this.LBdate.Text = "MONTH YEAR";
             this.LBdate.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.LBdate.Click += new System.EventHandler(this.label7_Click);
             // 
             // Form1
             // 

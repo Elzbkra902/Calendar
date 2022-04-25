@@ -34,6 +34,8 @@ namespace Calendar
             this.txCzynnosc = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.btnZapisz = new System.Windows.Forms.Button();
+            this.label3 = new System.Windows.Forms.Label();
+            this.txOpis = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // label1
@@ -57,7 +59,7 @@ namespace Calendar
             // txCzynnosc
             // 
             this.txCzynnosc.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.txCzynnosc.Location = new System.Drawing.Point(55, 125);
+            this.txCzynnosc.Location = new System.Drawing.Point(55, 107);
             this.txCzynnosc.Name = "txCzynnosc";
             this.txCzynnosc.Size = new System.Drawing.Size(284, 26);
             this.txCzynnosc.TabIndex = 2;
@@ -65,7 +67,7 @@ namespace Calendar
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(52, 109);
+            this.label2.Location = new System.Drawing.Point(52, 91);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(53, 13);
             this.label2.TabIndex = 3;
@@ -73,7 +75,7 @@ namespace Calendar
             // 
             // btnZapisz
             // 
-            this.btnZapisz.Location = new System.Drawing.Point(264, 197);
+            this.btnZapisz.Location = new System.Drawing.Point(264, 241);
             this.btnZapisz.Name = "btnZapisz";
             this.btnZapisz.Size = new System.Drawing.Size(75, 23);
             this.btnZapisz.TabIndex = 4;
@@ -81,11 +83,31 @@ namespace Calendar
             this.btnZapisz.UseVisualStyleBackColor = true;
             this.btnZapisz.Click += new System.EventHandler(this.btnZapisz_Click);
             // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(52, 149);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(28, 13);
+            this.label3.TabIndex = 6;
+            this.label3.Text = "Opis";
+            // 
+            // txOpis
+            // 
+            this.txOpis.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.txOpis.Location = new System.Drawing.Point(55, 165);
+            this.txOpis.Multiline = true;
+            this.txOpis.Name = "txOpis";
+            this.txOpis.Size = new System.Drawing.Size(284, 56);
+            this.txOpis.TabIndex = 5;
+            // 
             // FormularzZdarzen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(392, 262);
+            this.ClientSize = new System.Drawing.Size(392, 336);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.txOpis);
             this.Controls.Add(this.btnZapisz);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.txCzynnosc);
@@ -107,5 +129,7 @@ namespace Calendar
         private System.Windows.Forms.TextBox txCzynnosc;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button btnZapisz;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.TextBox txOpis;
     }
 }

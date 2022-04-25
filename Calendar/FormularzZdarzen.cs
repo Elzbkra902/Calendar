@@ -25,7 +25,7 @@ namespace Calendar
 
         IFirebaseClient Client;
 
-        String connString = "server=localhost; user id=root; database=db_kalendarz;sslmode=none";
+        // String connString = "server=localhost; user id=root; database=db_kalendarz;sslmode=none";
         
 
         public FormularzZdarzen()
@@ -41,21 +41,22 @@ namespace Calendar
                 MessageBox.Show("Nawiązano połączenie z bazą danych");
             }
 
-            txDate.Text = UserControlDays.static_day + "/" + Form1.static_month + "/" + Form1.static_year;
+            txDate.Text = Form1.static_year + "/" + Form1.static_month + "/" +  UserControlDays.static_day;
         }
 
-        private void btnZapisz_Click(object sender, EventArgs e)
+        private async void btnZapisz_Click(object sender, EventArgs e)
         {
-            MySqlConnection conn = new MySqlConnection(connString);
-            conn.Open();
-            String sql = "INSERT INTO tbl_calendar(date,czynnosc)values(?,?)";
-            MySqlCommand cmd = conn.CreateCommand();
-            cmd.Parameters.AddWithValue("date", txDate.Text);
-            cmd.Parameters.AddWithValue("czynnosc", txCzynnosc.Text);
-            cmd.ExecuteNonQuery();
-            MessageBox.Show("Pomyślnie zapisano zmiany");
-            cmd.Dispose();
-            conn.Close();
+            var dane = new Dane_Czynosci 
+            {
+                data_czynnosci = txDate.Text,
+                Czynnosc = txCzynnosc.Text,
+                opis = txOpis.Text
+            };
+            SetResponse resp = await Client.SetAsync("Zdarzenia/"+txDate.Text,dane);
+            Dane_Czynosci result = resp.ResultAs<Dane_Czynosci>();
+
+            MessageBox.Show("Dane zostały zapisane w bazie danych");
+            this.Close();
         }
     }
 }
