@@ -12,16 +12,14 @@ using FireSharp.Config;
 using FireSharp.Interfaces;
 using FireSharp.Response;
 
-
 namespace Calendar
 {
-    public partial class logowanie : Form
+    public partial class Rejestracja : Form
     {
-        public logowanie()
+        public Rejestracja()
         {
             InitializeComponent();
         }
-
         IFirebaseConfig config = new FirebaseConfig
         {
             AuthSecret = "4Z4BDQR2iD0Z2NU4w4NH1byRsdgRjci6ZAfCsbtQ",
@@ -30,7 +28,7 @@ namespace Calendar
 
         IFirebaseClient Client;
 
-        private void logowanie_Load(object sender, EventArgs e)
+        private void Rejestracja_Load(object sender, EventArgs e)
         {
             try
             {
@@ -40,13 +38,27 @@ namespace Calendar
             {
                 MessageBox.Show("Program napotkał problem z nawiązaniem połączenia");
             }
-
         }
 
         private void RejestrBtn_Click(object sender, EventArgs e)
         {
-            Rejestracja reg = new Rejestracja();
-            reg.ShowDialog();
+            #region Warunki formularza
+            if (string.IsNullOrWhiteSpace(UserNameTBox.Text) &&
+                string.IsNullOrWhiteSpace(PassTBox.Text) &&
+                string.IsNullOrWhiteSpace(mailTBox.Text)) 
+                MessageBox.Show("Uzupełnij wszystkie pola formularza");
+            #endregion
+
+            MyUser user = new MyUser()
+            {
+                Login = UserNameTBox.Text,
+                Haslo = PassTBox.Text,
+                Mail = mailTBox.Text
+            };
+
+            SetResponse set = Client.Set(@"Users/"+ UserNameTBox.Text, user);
+            MessageBox.Show("Rejestracja przebiegła pomyślnie");
+
         }
     }
 }

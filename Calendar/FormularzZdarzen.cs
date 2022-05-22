@@ -35,7 +35,15 @@ namespace Calendar
 
         private void FormularzZdarzen_Load(object sender, EventArgs e)
         {
-            Client = new FireSharp.FirebaseClient(config);
+            try
+            {
+                Client = new FireSharp.FirebaseClient(config);
+            }
+            catch
+            {
+                MessageBox.Show("Program napotkał problem z nawiązaniem połączenia");
+            }
+            // Client = new FireSharp.FirebaseClient(config);
             if(Client != null) // test bazy 
             {
                 MessageBox.Show("Nawiązano połączenie z bazą danych");

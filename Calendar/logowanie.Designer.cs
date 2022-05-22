@@ -79,6 +79,7 @@ namespace Calendar
             this.RejestrBtn.TabIndex = 4;
             this.RejestrBtn.Text = "Zarejestruj";
             this.RejestrBtn.UseVisualStyleBackColor = true;
+            this.RejestrBtn.Click += new System.EventHandler(this.RejestrBtn_Click);
             // 
             // LogInBUT
             // 
