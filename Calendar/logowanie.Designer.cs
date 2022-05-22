@@ -36,6 +36,9 @@ namespace Calendar
             this.RejestrBtn = new System.Windows.Forms.Button();
             this.LogInBUT = new System.Windows.Forms.Button();
             this.ZamknjiBtn = new System.Windows.Forms.Button();
+            this.pokaz = new System.Windows.Forms.Button();
+            this.ukryj = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // UserNameTBox
@@ -49,13 +52,15 @@ namespace Calendar
             // 
             this.PassTBox.Location = new System.Drawing.Point(104, 115);
             this.PassTBox.Name = "PassTBox";
-            this.PassTBox.Size = new System.Drawing.Size(216, 20);
+            this.PassTBox.PasswordChar = '*';
+            this.PassTBox.Size = new System.Drawing.Size(179, 20);
             this.PassTBox.TabIndex = 1;
             // 
             // LoginLBL
             // 
             this.LoginLBL.AutoSize = true;
             this.LoginLBL.Font = new System.Drawing.Font("Arial Black", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.LoginLBL.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.LoginLBL.Location = new System.Drawing.Point(11, 53);
             this.LoginLBL.Name = "LoginLBL";
             this.LoginLBL.Size = new System.Drawing.Size(76, 30);
@@ -66,6 +71,7 @@ namespace Calendar
             // 
             this.HasloLBL.AutoSize = true;
             this.HasloLBL.Font = new System.Drawing.Font("Arial Black", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.HasloLBL.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.HasloLBL.Location = new System.Drawing.Point(11, 106);
             this.HasloLBL.Name = "HasloLBL";
             this.HasloLBL.Size = new System.Drawing.Size(79, 30);
@@ -74,6 +80,8 @@ namespace Calendar
             // 
             // RejestrBtn
             // 
+            this.RejestrBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.RejestrBtn.ForeColor = System.Drawing.Color.LightSalmon;
             this.RejestrBtn.Location = new System.Drawing.Point(128, 187);
             this.RejestrBtn.Name = "RejestrBtn";
             this.RejestrBtn.Size = new System.Drawing.Size(97, 23);
@@ -84,6 +92,8 @@ namespace Calendar
             // 
             // LogInBUT
             // 
+            this.LogInBUT.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.LogInBUT.ForeColor = System.Drawing.Color.LightSalmon;
             this.LogInBUT.Location = new System.Drawing.Point(244, 187);
             this.LogInBUT.Name = "LogInBUT";
             this.LogInBUT.Size = new System.Drawing.Size(97, 23);
@@ -94,6 +104,8 @@ namespace Calendar
             // 
             // ZamknjiBtn
             // 
+            this.ZamknjiBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.ZamknjiBtn.ForeColor = System.Drawing.Color.LightSalmon;
             this.ZamknjiBtn.Location = new System.Drawing.Point(12, 187);
             this.ZamknjiBtn.Name = "ZamknjiBtn";
             this.ZamknjiBtn.Size = new System.Drawing.Size(97, 23);
@@ -102,11 +114,47 @@ namespace Calendar
             this.ZamknjiBtn.UseVisualStyleBackColor = true;
             this.ZamknjiBtn.Click += new System.EventHandler(this.ZamknjiBtn_Click);
             // 
+            // pokaz
+            // 
+            this.pokaz.Image = global::Calendar.Properties.Resources.otwarte;
+            this.pokaz.Location = new System.Drawing.Point(291, 108);
+            this.pokaz.Name = "pokaz";
+            this.pokaz.Size = new System.Drawing.Size(30, 30);
+            this.pokaz.TabIndex = 18;
+            this.pokaz.UseVisualStyleBackColor = true;
+            this.pokaz.Click += new System.EventHandler(this.pokaz_Click);
+            // 
+            // ukryj
+            // 
+            this.ukryj.Image = global::Calendar.Properties.Resources.zamkniete;
+            this.ukryj.Location = new System.Drawing.Point(291, 108);
+            this.ukryj.Name = "ukryj";
+            this.ukryj.Size = new System.Drawing.Size(30, 30);
+            this.ukryj.TabIndex = 19;
+            this.ukryj.UseVisualStyleBackColor = true;
+            this.ukryj.Click += new System.EventHandler(this.ukryj_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Arial Black", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label1.Location = new System.Drawing.Point(60, 8);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(223, 45);
+            this.label1.TabIndex = 20;
+            this.label1.Text = "Zaloguj się!";
+            // 
             // logowanie
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(353, 226);
+            this.BackColor = System.Drawing.Color.LightSalmon;
+            this.BackgroundImage = global::Calendar.Properties.Resources.paws;
+            this.ClientSize = new System.Drawing.Size(359, 226);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.pokaz);
+            this.Controls.Add(this.ukryj);
             this.Controls.Add(this.ZamknjiBtn);
             this.Controls.Add(this.LogInBUT);
             this.Controls.Add(this.RejestrBtn);
@@ -132,5 +180,8 @@ namespace Calendar
         private System.Windows.Forms.Button RejestrBtn;
         private System.Windows.Forms.Button LogInBUT;
         private System.Windows.Forms.Button ZamknjiBtn;
+        private System.Windows.Forms.Button pokaz;
+        private System.Windows.Forms.Button ukryj;
+        private System.Windows.Forms.Label label1;
     }
 }

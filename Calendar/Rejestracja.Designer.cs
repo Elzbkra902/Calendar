@@ -38,10 +38,14 @@ namespace Calendar
             this.mailTBox = new System.Windows.Forms.TextBox();
             this.ZamknjiBtn = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
+            this.pokaz = new System.Windows.Forms.Button();
+            this.ukryj = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // RejestrBtn
             // 
+            this.RejestrBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.RejestrBtn.ForeColor = System.Drawing.Color.LightSalmon;
             this.RejestrBtn.Location = new System.Drawing.Point(123, 202);
             this.RejestrBtn.Name = "RejestrBtn";
             this.RejestrBtn.Size = new System.Drawing.Size(216, 23);
@@ -54,6 +58,7 @@ namespace Calendar
             // 
             this.HasloLBL.AutoSize = true;
             this.HasloLBL.Font = new System.Drawing.Font("Arial Black", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.HasloLBL.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.HasloLBL.Location = new System.Drawing.Point(30, 156);
             this.HasloLBL.Name = "HasloLBL";
             this.HasloLBL.Size = new System.Drawing.Size(79, 30);
@@ -64,7 +69,8 @@ namespace Calendar
             // 
             this.LoginLBL.AutoSize = true;
             this.LoginLBL.Font = new System.Drawing.Font("Arial Black", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.LoginLBL.Location = new System.Drawing.Point(30, 103);
+            this.LoginLBL.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.LoginLBL.Location = new System.Drawing.Point(30, 113);
             this.LoginLBL.Name = "LoginLBL";
             this.LoginLBL.Size = new System.Drawing.Size(76, 30);
             this.LoginLBL.TabIndex = 7;
@@ -74,12 +80,13 @@ namespace Calendar
             // 
             this.PassTBox.Location = new System.Drawing.Point(123, 165);
             this.PassTBox.Name = "PassTBox";
-            this.PassTBox.Size = new System.Drawing.Size(216, 20);
+            this.PassTBox.PasswordChar = '*';
+            this.PassTBox.Size = new System.Drawing.Size(180, 20);
             this.PassTBox.TabIndex = 6;
             // 
             // UserNameTBox
             // 
-            this.UserNameTBox.Location = new System.Drawing.Point(123, 112);
+            this.UserNameTBox.Location = new System.Drawing.Point(123, 122);
             this.UserNameTBox.Name = "UserNameTBox";
             this.UserNameTBox.Size = new System.Drawing.Size(216, 20);
             this.UserNameTBox.TabIndex = 5;
@@ -88,7 +95,8 @@ namespace Calendar
             // 
             this.emailBOX.AutoSize = true;
             this.emailBOX.Font = new System.Drawing.Font("Arial Black", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.emailBOX.Location = new System.Drawing.Point(30, 53);
+            this.emailBOX.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.emailBOX.Location = new System.Drawing.Point(30, 69);
             this.emailBOX.Name = "emailBOX";
             this.emailBOX.Size = new System.Drawing.Size(83, 30);
             this.emailBOX.TabIndex = 11;
@@ -96,13 +104,15 @@ namespace Calendar
             // 
             // mailTBox
             // 
-            this.mailTBox.Location = new System.Drawing.Point(123, 62);
+            this.mailTBox.Location = new System.Drawing.Point(123, 78);
             this.mailTBox.Name = "mailTBox";
             this.mailTBox.Size = new System.Drawing.Size(216, 20);
             this.mailTBox.TabIndex = 10;
             // 
             // ZamknjiBtn
             // 
+            this.ZamknjiBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.ZamknjiBtn.ForeColor = System.Drawing.Color.LightSalmon;
             this.ZamknjiBtn.Location = new System.Drawing.Point(264, 243);
             this.ZamknjiBtn.Name = "ZamknjiBtn";
             this.ZamknjiBtn.Size = new System.Drawing.Size(75, 23);
@@ -115,17 +125,42 @@ namespace Calendar
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Arial Black", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label1.Location = new System.Drawing.Point(41, 8);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(287, 45);
             this.label1.TabIndex = 14;
             this.label1.Text = "Zarejestruj się!";
             // 
+            // pokaz
+            // 
+            this.pokaz.Image = global::Calendar.Properties.Resources.otwarte;
+            this.pokaz.Location = new System.Drawing.Point(309, 159);
+            this.pokaz.Name = "pokaz";
+            this.pokaz.Size = new System.Drawing.Size(30, 30);
+            this.pokaz.TabIndex = 16;
+            this.pokaz.UseVisualStyleBackColor = true;
+            this.pokaz.Click += new System.EventHandler(this.pokaz_Click);
+            // 
+            // ukryj
+            // 
+            this.ukryj.Image = global::Calendar.Properties.Resources.zamkniete;
+            this.ukryj.Location = new System.Drawing.Point(309, 159);
+            this.ukryj.Name = "ukryj";
+            this.ukryj.Size = new System.Drawing.Size(30, 30);
+            this.ukryj.TabIndex = 17;
+            this.ukryj.UseVisualStyleBackColor = true;
+            this.ukryj.Click += new System.EventHandler(this.ukryj_Click);
+            // 
             // Rejestracja
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.LightSalmon;
+            this.BackgroundImage = global::Calendar.Properties.Resources.paws;
             this.ClientSize = new System.Drawing.Size(369, 277);
+            this.Controls.Add(this.pokaz);
+            this.Controls.Add(this.ukryj);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.ZamknjiBtn);
             this.Controls.Add(this.emailBOX);
@@ -155,5 +190,7 @@ namespace Calendar
         private System.Windows.Forms.TextBox mailTBox;
         private System.Windows.Forms.Button ZamknjiBtn;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button pokaz;
+        private System.Windows.Forms.Button ukryj;
     }
 }

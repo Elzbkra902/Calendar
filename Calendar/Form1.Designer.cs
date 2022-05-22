@@ -29,9 +29,10 @@ namespace Calendar
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.Button btnnext;
+            System.Windows.Forms.Button btnprev;
+            System.Windows.Forms.Button ZamknjiBtn;
             this.daycontainer = new System.Windows.Forms.FlowLayoutPanel();
-            this.btnnext = new System.Windows.Forms.Button();
-            this.btnprev = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -40,11 +41,14 @@ namespace Calendar
             this.label6 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.LBdate = new System.Windows.Forms.Label();
-            this.ZamknjiBtn = new System.Windows.Forms.Button();
+            btnnext = new System.Windows.Forms.Button();
+            btnprev = new System.Windows.Forms.Button();
+            ZamknjiBtn = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // daycontainer
             // 
+            this.daycontainer.BackgroundImage = global::Calendar.Properties.Resources.paws;
             this.daycontainer.Location = new System.Drawing.Point(12, 91);
             this.daycontainer.Name = "daycontainer";
             this.daycontainer.Size = new System.Drawing.Size(770, 408);
@@ -52,28 +56,33 @@ namespace Calendar
             // 
             // btnnext
             // 
-            this.btnnext.Location = new System.Drawing.Point(700, 505);
-            this.btnnext.Name = "btnnext";
-            this.btnnext.Size = new System.Drawing.Size(75, 23);
-            this.btnnext.TabIndex = 1;
-            this.btnnext.Text = "Następny";
-            this.btnnext.UseVisualStyleBackColor = true;
-            this.btnnext.Click += new System.EventHandler(this.btnnext_Click);
+            btnnext.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            btnnext.ForeColor = System.Drawing.Color.LightSalmon;
+            btnnext.Location = new System.Drawing.Point(667, 505);
+            btnnext.Name = "btnnext";
+            btnnext.Size = new System.Drawing.Size(115, 23);
+            btnnext.TabIndex = 1;
+            btnnext.Text = "Następny";
+            btnnext.UseVisualStyleBackColor = true;
+            btnnext.Click += new System.EventHandler(this.btnnext_Click);
             // 
             // btnprev
             // 
-            this.btnprev.Location = new System.Drawing.Point(12, 505);
-            this.btnprev.Name = "btnprev";
-            this.btnprev.Size = new System.Drawing.Size(75, 23);
-            this.btnprev.TabIndex = 2;
-            this.btnprev.Text = "Poprzedni";
-            this.btnprev.UseVisualStyleBackColor = true;
-            this.btnprev.Click += new System.EventHandler(this.btnprev_Click);
+            btnprev.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            btnprev.ForeColor = System.Drawing.Color.LightSalmon;
+            btnprev.Location = new System.Drawing.Point(12, 505);
+            btnprev.Name = "btnprev";
+            btnprev.Size = new System.Drawing.Size(115, 23);
+            btnprev.TabIndex = 2;
+            btnprev.Text = "Poprzedni";
+            btnprev.UseVisualStyleBackColor = true;
+            btnprev.Click += new System.EventHandler(this.btnprev_Click);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label1.Location = new System.Drawing.Point(19, 69);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(95, 19);
@@ -84,6 +93,7 @@ namespace Calendar
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label2.Location = new System.Drawing.Point(147, 69);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(60, 19);
@@ -94,6 +104,7 @@ namespace Calendar
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label3.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label3.Location = new System.Drawing.Point(357, 69);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(73, 19);
@@ -104,6 +115,7 @@ namespace Calendar
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label4.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label4.Location = new System.Drawing.Point(260, 69);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(49, 19);
@@ -114,6 +126,7 @@ namespace Calendar
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label5.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label5.Location = new System.Drawing.Point(591, 69);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(58, 19);
@@ -124,6 +137,7 @@ namespace Calendar
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label6.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label6.Location = new System.Drawing.Point(477, 69);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(51, 19);
@@ -134,6 +148,7 @@ namespace Calendar
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label8.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label8.Location = new System.Drawing.Point(686, 69);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(70, 19);
@@ -143,6 +158,7 @@ namespace Calendar
             // LBdate
             // 
             this.LBdate.Font = new System.Drawing.Font("Candara", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.LBdate.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.LBdate.Location = new System.Drawing.Point(264, 19);
             this.LBdate.Name = "LBdate";
             this.LBdate.Size = new System.Drawing.Size(264, 38);
@@ -152,20 +168,23 @@ namespace Calendar
             // 
             // ZamknjiBtn
             // 
-            this.ZamknjiBtn.Location = new System.Drawing.Point(361, 505);
-            this.ZamknjiBtn.Name = "ZamknjiBtn";
-            this.ZamknjiBtn.Size = new System.Drawing.Size(75, 23);
-            this.ZamknjiBtn.TabIndex = 12;
-            this.ZamknjiBtn.Text = "Zamknij";
-            this.ZamknjiBtn.UseVisualStyleBackColor = true;
-            this.ZamknjiBtn.Click += new System.EventHandler(this.ZamknjiBtn_Click);
+            ZamknjiBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            ZamknjiBtn.ForeColor = System.Drawing.Color.LightSalmon;
+            ZamknjiBtn.Location = new System.Drawing.Point(361, 505);
+            ZamknjiBtn.Name = "ZamknjiBtn";
+            ZamknjiBtn.Size = new System.Drawing.Size(115, 23);
+            ZamknjiBtn.TabIndex = 12;
+            ZamknjiBtn.Text = "Zamknij";
+            ZamknjiBtn.UseVisualStyleBackColor = true;
+            ZamknjiBtn.Click += new System.EventHandler(this.ZamknjiBtn_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.LightSalmon;
             this.ClientSize = new System.Drawing.Size(793, 538);
-            this.Controls.Add(this.ZamknjiBtn);
+            this.Controls.Add(ZamknjiBtn);
             this.Controls.Add(this.LBdate);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label5);
@@ -174,9 +193,10 @@ namespace Calendar
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.btnprev);
-            this.Controls.Add(this.btnnext);
+            this.Controls.Add(btnprev);
+            this.Controls.Add(btnnext);
             this.Controls.Add(this.daycontainer);
+            this.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -190,8 +210,6 @@ namespace Calendar
         #endregion
 
         private System.Windows.Forms.FlowLayoutPanel daycontainer;
-        private System.Windows.Forms.Button btnnext;
-        private System.Windows.Forms.Button btnprev;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
@@ -200,7 +218,6 @@ namespace Calendar
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label LBdate;
-        private System.Windows.Forms.Button ZamknjiBtn;
     }
 }
 

@@ -69,5 +69,23 @@ namespace Calendar
         {
             this.Close();
         }
+
+        private void pokaz_Click(object sender, EventArgs e)
+        {
+            if(PassTBox.PasswordChar=='*')
+            {
+                ukryj.BringToFront();
+                PassTBox.PasswordChar = '\0';
+            }
+        }
+
+        private void ukryj_Click(object sender, EventArgs e)
+        {
+            if (PassTBox.PasswordChar == '\0')
+            {
+                pokaz.BringToFront();
+                PassTBox.PasswordChar = '*';
+            }
+        }
     }
 }

@@ -57,7 +57,7 @@ namespace Calendar
             var dane = new Dane_Czynosci 
             {
                 data_czynnosci = txDate.Text,
-                Czynnosc = txCzynnosc.Text,
+                Czynnosc = comboCzynnosc.Text,
                 opis = txOpis.Text
             };
             SetResponse resp = await Client.SetAsync("Zdarzenia/"+txDate.Text,dane);
