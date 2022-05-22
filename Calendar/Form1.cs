@@ -9,6 +9,10 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+using FireSharp.Config;
+using FireSharp.Interfaces;
+using FireSharp.Response;
+
 namespace Calendar
 {
     public partial class Form1 : Form
@@ -20,22 +24,12 @@ namespace Calendar
         public static int static_month, static_year;
 
 
-        public Form1()
+        public Form1() // główne wywołanie okna aplikacji
         {
             InitializeComponent();
         }
 
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label4_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Form1_Load(object sender, EventArgs e)
+        private void Form1_Load(object sender, EventArgs e) // main
         {
             displayDays();
         }
@@ -73,9 +67,9 @@ namespace Calendar
             
         }
 
-        private void label7_Click(object sender, EventArgs e)
+        private void ZamknjiBtn_Click(object sender, EventArgs e)
         {
-
+            this.Close();
         }
 
         private void btnprev_Click(object sender, EventArgs e)
