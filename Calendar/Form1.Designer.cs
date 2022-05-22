@@ -40,6 +40,7 @@ namespace Calendar
             this.label6 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.LBdate = new System.Windows.Forms.Label();
+            this.ZamknjiBtn = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // daycontainer
@@ -149,11 +150,22 @@ namespace Calendar
             this.LBdate.Text = "MONTH YEAR";
             this.LBdate.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // ZamknjiBtn
+            // 
+            this.ZamknjiBtn.Location = new System.Drawing.Point(361, 505);
+            this.ZamknjiBtn.Name = "ZamknjiBtn";
+            this.ZamknjiBtn.Size = new System.Drawing.Size(75, 23);
+            this.ZamknjiBtn.TabIndex = 12;
+            this.ZamknjiBtn.Text = "Zamknij";
+            this.ZamknjiBtn.UseVisualStyleBackColor = true;
+            this.ZamknjiBtn.Click += new System.EventHandler(this.ZamknjiBtn_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(793, 538);
+            this.Controls.Add(this.ZamknjiBtn);
             this.Controls.Add(this.LBdate);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label5);
@@ -188,6 +200,7 @@ namespace Calendar
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label LBdate;
+        private System.Windows.Forms.Button ZamknjiBtn;
     }
 }
 

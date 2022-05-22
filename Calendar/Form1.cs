@@ -67,6 +67,11 @@ namespace Calendar
             
         }
 
+        private void ZamknjiBtn_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
         private void btnprev_Click(object sender, EventArgs e)
         {
             daycontainer.Controls.Clear();
