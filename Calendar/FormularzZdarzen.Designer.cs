@@ -115,7 +115,7 @@ namespace Calendar
             this.Controls.Add(this.label1);
             this.Name = "FormularzZdarzen";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "FormularzZdarzen";
+            this.Text = "Formularz Zdarzeń";
             this.Load += new System.EventHandler(this.FormularzZdarzen_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
