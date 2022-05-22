@@ -36,6 +36,7 @@ namespace Calendar
             this.btnZapisz = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.txOpis = new System.Windows.Forms.TextBox();
+            this.ZamknjiBtn = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -101,11 +102,22 @@ namespace Calendar
             this.txOpis.Size = new System.Drawing.Size(284, 56);
             this.txOpis.TabIndex = 5;
             // 
+            // ZamknjiBtn
+            // 
+            this.ZamknjiBtn.Location = new System.Drawing.Point(55, 241);
+            this.ZamknjiBtn.Name = "ZamknjiBtn";
+            this.ZamknjiBtn.Size = new System.Drawing.Size(75, 23);
+            this.ZamknjiBtn.TabIndex = 13;
+            this.ZamknjiBtn.Text = "Zamknij";
+            this.ZamknjiBtn.UseVisualStyleBackColor = true;
+            this.ZamknjiBtn.Click += new System.EventHandler(this.ZamknjiBtn_Click);
+            // 
             // FormularzZdarzen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(392, 336);
+            this.ClientSize = new System.Drawing.Size(392, 277);
+            this.Controls.Add(this.ZamknjiBtn);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.txOpis);
             this.Controls.Add(this.btnZapisz);
@@ -113,6 +125,7 @@ namespace Calendar
             this.Controls.Add(this.txCzynnosc);
             this.Controls.Add(this.txDate);
             this.Controls.Add(this.label1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FormularzZdarzen";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Formularz Zdarzeń";
@@ -131,5 +144,6 @@ namespace Calendar
         private System.Windows.Forms.Button btnZapisz;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox txOpis;
+        private System.Windows.Forms.Button ZamknjiBtn;
     }
 }

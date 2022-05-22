@@ -64,5 +64,10 @@ namespace Calendar
             this.Close();
 
         }
+
+        private void ZamknjiBtn_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

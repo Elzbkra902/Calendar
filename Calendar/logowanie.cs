@@ -79,5 +79,10 @@ namespace Calendar
                 MyUser.ShowError();
             }
         }
+
+        private void ZamknjiBtn_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

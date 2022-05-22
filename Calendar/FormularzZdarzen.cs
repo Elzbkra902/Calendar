@@ -66,5 +66,10 @@ namespace Calendar
             MessageBox.Show("Dane zostały zapisane w bazie danych");
             this.Close();
         }
+
+        private void ZamknjiBtn_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

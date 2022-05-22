@@ -35,6 +35,7 @@ namespace Calendar
             this.HasloLBL = new System.Windows.Forms.Label();
             this.RejestrBtn = new System.Windows.Forms.Button();
             this.LogInBUT = new System.Windows.Forms.Button();
+            this.ZamknjiBtn = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // UserNameTBox
@@ -73,7 +74,7 @@ namespace Calendar
             // 
             // RejestrBtn
             // 
-            this.RejestrBtn.Location = new System.Drawing.Point(104, 187);
+            this.RejestrBtn.Location = new System.Drawing.Point(128, 187);
             this.RejestrBtn.Name = "RejestrBtn";
             this.RejestrBtn.Size = new System.Drawing.Size(97, 23);
             this.RejestrBtn.TabIndex = 4;
@@ -83,7 +84,7 @@ namespace Calendar
             // 
             // LogInBUT
             // 
-            this.LogInBUT.Location = new System.Drawing.Point(223, 187);
+            this.LogInBUT.Location = new System.Drawing.Point(244, 187);
             this.LogInBUT.Name = "LogInBUT";
             this.LogInBUT.Size = new System.Drawing.Size(97, 23);
             this.LogInBUT.TabIndex = 5;
@@ -91,17 +92,29 @@ namespace Calendar
             this.LogInBUT.UseVisualStyleBackColor = true;
             this.LogInBUT.Click += new System.EventHandler(this.LogInBUT_Click);
             // 
+            // ZamknjiBtn
+            // 
+            this.ZamknjiBtn.Location = new System.Drawing.Point(12, 187);
+            this.ZamknjiBtn.Name = "ZamknjiBtn";
+            this.ZamknjiBtn.Size = new System.Drawing.Size(97, 23);
+            this.ZamknjiBtn.TabIndex = 13;
+            this.ZamknjiBtn.Text = "Zamknij";
+            this.ZamknjiBtn.UseVisualStyleBackColor = true;
+            this.ZamknjiBtn.Click += new System.EventHandler(this.ZamknjiBtn_Click);
+            // 
             // logowanie
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(353, 226);
+            this.Controls.Add(this.ZamknjiBtn);
             this.Controls.Add(this.LogInBUT);
             this.Controls.Add(this.RejestrBtn);
             this.Controls.Add(this.HasloLBL);
             this.Controls.Add(this.LoginLBL);
             this.Controls.Add(this.PassTBox);
             this.Controls.Add(this.UserNameTBox);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "logowanie";
             this.Text = "logowanie";
             this.Load += new System.EventHandler(this.logowanie_Load);
@@ -118,5 +131,6 @@ namespace Calendar
         private System.Windows.Forms.Label HasloLBL;
         private System.Windows.Forms.Button RejestrBtn;
         private System.Windows.Forms.Button LogInBUT;
+        private System.Windows.Forms.Button ZamknjiBtn;
     }
 }

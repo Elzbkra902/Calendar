@@ -36,11 +36,13 @@ namespace Calendar
             this.UserNameTBox = new System.Windows.Forms.TextBox();
             this.emailBOX = new System.Windows.Forms.Label();
             this.mailTBox = new System.Windows.Forms.TextBox();
+            this.ZamknjiBtn = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // RejestrBtn
             // 
-            this.RejestrBtn.Location = new System.Drawing.Point(123, 237);
+            this.RejestrBtn.Location = new System.Drawing.Point(123, 202);
             this.RejestrBtn.Name = "RejestrBtn";
             this.RejestrBtn.Size = new System.Drawing.Size(216, 23);
             this.RejestrBtn.TabIndex = 9;
@@ -99,11 +101,33 @@ namespace Calendar
             this.mailTBox.Size = new System.Drawing.Size(216, 20);
             this.mailTBox.TabIndex = 10;
             // 
+            // ZamknjiBtn
+            // 
+            this.ZamknjiBtn.Location = new System.Drawing.Point(264, 243);
+            this.ZamknjiBtn.Name = "ZamknjiBtn";
+            this.ZamknjiBtn.Size = new System.Drawing.Size(75, 23);
+            this.ZamknjiBtn.TabIndex = 13;
+            this.ZamknjiBtn.Text = "Zamknij";
+            this.ZamknjiBtn.UseVisualStyleBackColor = true;
+            this.ZamknjiBtn.Click += new System.EventHandler(this.ZamknjiBtn_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Arial Black", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label1.Location = new System.Drawing.Point(41, 8);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(287, 45);
+            this.label1.TabIndex = 14;
+            this.label1.Text = "Zarejestruj się!";
+            // 
             // Rejestracja
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(369, 347);
+            this.ClientSize = new System.Drawing.Size(369, 277);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.ZamknjiBtn);
             this.Controls.Add(this.emailBOX);
             this.Controls.Add(this.mailTBox);
             this.Controls.Add(this.RejestrBtn);
@@ -111,6 +135,7 @@ namespace Calendar
             this.Controls.Add(this.LoginLBL);
             this.Controls.Add(this.PassTBox);
             this.Controls.Add(this.UserNameTBox);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Rejestracja";
             this.Text = "Rejestracja";
             this.Load += new System.EventHandler(this.Rejestracja_Load);
@@ -128,5 +153,7 @@ namespace Calendar
         private System.Windows.Forms.TextBox UserNameTBox;
         private System.Windows.Forms.Label emailBOX;
         private System.Windows.Forms.TextBox mailTBox;
+        private System.Windows.Forms.Button ZamknjiBtn;
+        private System.Windows.Forms.Label label1;
     }
 }
