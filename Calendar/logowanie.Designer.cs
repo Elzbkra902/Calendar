@@ -89,6 +89,7 @@ namespace Calendar
             this.LogInBUT.TabIndex = 5;
             this.LogInBUT.Text = "Zaloguj";
             this.LogInBUT.UseVisualStyleBackColor = true;
+            this.LogInBUT.Click += new System.EventHandler(this.LogInBUT_Click);
             // 
             // logowanie
             // 

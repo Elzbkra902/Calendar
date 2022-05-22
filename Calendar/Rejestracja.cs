@@ -45,8 +45,11 @@ namespace Calendar
             #region Warunki formularza
             if (string.IsNullOrWhiteSpace(UserNameTBox.Text) &&
                 string.IsNullOrWhiteSpace(PassTBox.Text) &&
-                string.IsNullOrWhiteSpace(mailTBox.Text)) 
+                string.IsNullOrWhiteSpace(mailTBox.Text))
+            {
                 MessageBox.Show("Uzupełnij wszystkie pola formularza");
+                return;
+            }
             #endregion
 
             MyUser user = new MyUser()
@@ -58,6 +61,7 @@ namespace Calendar
 
             SetResponse set = Client.Set(@"Users/"+ UserNameTBox.Text, user);
             MessageBox.Show("Rejestracja przebiegła pomyślnie");
+            this.Close();
 
         }
     }

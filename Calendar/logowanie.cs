@@ -48,5 +48,36 @@ namespace Calendar
             Rejestracja reg = new Rejestracja();
             reg.ShowDialog();
         }
+
+        private void LogInBUT_Click(object sender, EventArgs e)
+        {
+            #region Warunki formularza
+            if (string.IsNullOrWhiteSpace(UserNameTBox.Text) &&
+                string.IsNullOrWhiteSpace(PassTBox.Text))
+            {
+                MessageBox.Show("Uzupełnij wszystkie pola formularza");
+                return;
+            }
+            #endregion
+            FirebaseResponse res = Client.Get(@"Users/" + UserNameTBox.Text);
+            MyUser ResUser = res.ResultAs<MyUser>();
+            
+            MyUser CurUser = new MyUser()
+            {
+                Login = UserNameTBox.Text,
+                Haslo = PassTBox.Text
+            };
+
+            if(MyUser.IsEqual(ResUser,CurUser))
+            {
+                Form1 kal = new Form1();
+                kal.ShowDialog();
+                this.Close();
+            }
+            else
+            {
+                MyUser.ShowError();
+            }
+        }
     }
 }
