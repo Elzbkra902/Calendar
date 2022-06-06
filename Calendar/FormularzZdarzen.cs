@@ -71,5 +71,144 @@ namespace Calendar
         {
             this.Close();
         }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void comboCzynnosc_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if(comboCzynnosc.Text=="Karmienie")
+            {
+                jakaKarma.Visible = true;
+                lblIle.Visible = true;
+                lblJaka.Visible = true;
+                iloscKarmy.Visible = true;
+
+                lblDawka.Visible = false;
+                lblLek.Visible = false;
+                lblNowyLek.Visible = false;
+                lekLista.Visible = false;
+                nowyLek.Visible = false;
+                dawkaBox.Visible = false;
+                btnDodaj.Visible = false;
+
+                czesanieCzekBox.Visible = false;
+
+                mycieCzekBox.Visible = false;
+                szampon.Visible = false;
+                szamponNazwa.Visible = false;
+                odrzywkaNazwa.Visible = false;
+                odzywka.Visible = false;
+            }
+            if (comboCzynnosc.Text == "Leki")
+            {
+                lblDawka.Visible = true;
+                lblIle.Visible = true;
+                lblLek.Visible = true;
+                lblNowyLek.Visible = true;
+                lekLista.Visible = true;
+                nowyLek.Visible = true;
+                dawkaBox.Visible = true;
+                btnDodaj.Visible = true;
+
+                jakaKarma.Visible = false;
+                lblIle.Visible = false;
+                lblJaka.Visible = false;
+                iloscKarmy.Visible = false;
+
+                czesanieCzekBox.Visible = false;
+
+                mycieCzekBox.Visible = false;
+                szampon.Visible = false;
+                szamponNazwa.Visible = false;
+                odrzywkaNazwa.Visible = false;
+                odzywka.Visible = false;
+            }
+            if (comboCzynnosc.Text == "Czesanie")
+            {
+                czesanieCzekBox.Visible = true;
+
+                lblDawka.Visible = false;
+                lblIle.Visible = false;
+                lblLek.Visible = false;
+                lblNowyLek.Visible = false;
+                lekLista.Visible = false;
+                nowyLek.Visible = false;
+                dawkaBox.Visible = false;
+                btnDodaj.Visible = false;
+
+                jakaKarma.Visible = false;
+                lblIle.Visible = false;
+                lblJaka.Visible = false;
+                iloscKarmy.Visible = false;
+
+                mycieCzekBox.Visible = false;
+                szampon.Visible = false;
+                szamponNazwa.Visible = false;
+                odrzywkaNazwa.Visible = false;
+                odzywka.Visible = false;
+            }
+            if (comboCzynnosc.Text == "Mycie")
+            {
+                mycieCzekBox.Visible = true;
+                szampon.Visible = true;
+                szamponNazwa.Visible = true;
+                odrzywkaNazwa.Visible = true;
+                odzywka.Visible = true;
+
+                lblDawka.Visible = false;
+                lblIle.Visible = false;
+                lblLek.Visible = false;
+                lblNowyLek.Visible = false;
+                lekLista.Visible = false;
+                nowyLek.Visible = false;
+                dawkaBox.Visible = false;
+                btnDodaj.Visible = false;
+
+                jakaKarma.Visible = false;
+                lblIle.Visible = false;
+                lblJaka.Visible = false;
+                iloscKarmy.Visible = false;
+
+                czesanieCzekBox.Visible = false;
+
+            }
+            if (comboCzynnosc.Text == "Inne")
+            {
+                lblDawka.Visible = false;
+                lblIle.Visible = false;
+                lblLek.Visible = false;
+                lblNowyLek.Visible = false;
+                lekLista.Visible = false;
+                nowyLek.Visible = false;
+                dawkaBox.Visible = false;
+                btnDodaj.Visible = false;
+
+                jakaKarma.Visible = false;
+                lblIle.Visible = false;
+                lblJaka.Visible = false;
+                iloscKarmy.Visible = false;
+
+                czesanieCzekBox.Visible = false;
+
+                mycieCzekBox.Visible = false;
+                szampon.Visible = false;
+                szamponNazwa.Visible = false;
+                odrzywkaNazwa.Visible = false;
+                odzywka.Visible = false;
+            }
+        }
+
+        private void btnDodaj_Click(object sender, EventArgs e)
+        {
+            lekLista.Items.Add(nowyLek.Text);
+        }
     }
 }

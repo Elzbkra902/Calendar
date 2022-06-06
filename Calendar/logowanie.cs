@@ -70,7 +70,7 @@ namespace Calendar
 
             if(MyUser.IsEqual(ResUser,CurUser))
             {
-                Form1 kal = new Form1();
+                uzytkownik kal = new uzytkownik();
                 kal.ShowDialog();
                 this.Close();
             }

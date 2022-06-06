@@ -58,18 +58,13 @@ namespace Calendar
                 daycontainer.Controls.Add(ucblank);
 
             }
-            for(int i =1; i<=days; i++)
+            for (int i = 1; i <= days; i++)
             {
                 UserControlDays ucdays = new UserControlDays();
                 ucdays.days(i);
                 daycontainer.Controls.Add(ucdays);
             }
-            
-        }
 
-        private void ZamknjiBtn_Click(object sender, EventArgs e)
-        {
-            this.Close();
         }
 
         private void btnprev_Click(object sender, EventArgs e)
@@ -104,7 +99,10 @@ namespace Calendar
                 daycontainer.Controls.Add(ucdays);
             }
         }
-
+        private void ZamknjiBtn_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
         private void btnnext_Click(object sender, EventArgs e)
         {
             daycontainer.Controls.Clear();
@@ -138,3 +136,5 @@ namespace Calendar
         }
     }
 }
+
+
