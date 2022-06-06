@@ -40,7 +40,7 @@ namespace Calendar
             {
                 MessageBox.Show("Program napotkał problem z nawiązaniem połączenia");
             }
-            listaKalendarzy.Items.Add(Client.Get(@"Kalendarz"));
+            // listaKalendarzy.Items.Add(Client.Get(@"Kalendarz"));
 
         }
 

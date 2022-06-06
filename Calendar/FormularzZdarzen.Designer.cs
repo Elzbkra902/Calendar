@@ -307,9 +307,11 @@ namespace Calendar
             this.szampon.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.szampon.FormattingEnabled = true;
             this.szampon.Items.AddRange(new object[] {
-            "Kroplówka ",
-            "Insulina",
-            "Tabletka do odrobaczania"});
+            "Super Beno ",
+            "VetExpert",
+            "pet care Naturaphy",
+            "Bio",
+            "Inny"});
             this.szampon.Location = new System.Drawing.Point(218, 205);
             this.szampon.Name = "szampon";
             this.szampon.Size = new System.Drawing.Size(121, 21);
@@ -321,9 +323,11 @@ namespace Calendar
             this.odzywka.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.odzywka.FormattingEnabled = true;
             this.odzywka.Items.AddRange(new object[] {
-            "Kroplówka ",
-            "Insulina",
-            "Tabletka do odrobaczania"});
+            "Super Beno ",
+            "VetExpert",
+            "pet care Naturaphy",
+            "Bio",
+            "Inna"});
             this.odzywka.Location = new System.Drawing.Point(218, 252);
             this.odzywka.Name = "odzywka";
             this.odzywka.Size = new System.Drawing.Size(121, 21);

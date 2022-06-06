@@ -52,7 +52,12 @@ namespace Calendar
             // 
             // listaKalendarzy
             // 
+            this.listaKalendarzy.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.listaKalendarzy.FormattingEnabled = true;
+            this.listaKalendarzy.Items.AddRange(new object[] {
+            "Azor",
+            "Myszor",
+            "Puszek"});
             this.listaKalendarzy.Location = new System.Drawing.Point(56, 90);
             this.listaKalendarzy.Name = "listaKalendarzy";
             this.listaKalendarzy.Size = new System.Drawing.Size(302, 21);
