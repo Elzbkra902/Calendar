@@ -34,6 +34,7 @@ namespace Calendar
             // 
             // lbdays
             // 
+            this.lbdays.BackColor = System.Drawing.Color.Transparent;
             this.lbdays.Font = new System.Drawing.Font("Franklin Gothic Heavy", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.lbdays.Location = new System.Drawing.Point(0, 0);
             this.lbdays.Name = "lbdays";
@@ -47,7 +48,7 @@ namespace Calendar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.White;
+            this.BackColor = System.Drawing.Color.Transparent;
             this.Controls.Add(this.lbdays);
             this.Name = "UserControlDays";
             this.Size = new System.Drawing.Size(102, 63);
